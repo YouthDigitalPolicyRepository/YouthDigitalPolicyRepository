@@ -56,15 +56,15 @@ body {
 }
 
 h1 {
-  font-family: 'SpectralSC Regular';
+  font-family: 'SpectralSC Light';
 }
 
 h2 {
-  font-family: 'Source Sans 3 Bold';
+  font-family: 'Source Sans 3 Regular';
 }
 
 h3 {
-  font-family: 'SpectralSC light';
+  font-family: 'SpectralSC Light';
 }
 
 h4 {
@@ -134,7 +134,6 @@ a:hover {
   top: 0;
   background-color: #2a8169 ;
   color: whitesmoke;
-  font-family: 'SpectralSC Regular';
   z-index: 100;
 }
 
@@ -160,6 +159,7 @@ h1.logo {
   margin-left: auto;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  font-family: 'SpectralSC Regular';
 }
 
 .nav-links a {
@@ -260,6 +260,40 @@ img.headshot{
 
 .active-view {
   display: block;
+}
+
+
+/* =============================================================================
+   Codebook Table
+   ============================================================================= */
+
+table.codebook {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-family: sans-serif;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+table.codebook thead tr {
+  background-color: #2a8169; 
+  color: #ffffff;
+  text-align: left;
+}
+
+table.codebook th, table td {
+  padding: 12px 15px;
+}
+
+table.codebook tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+table.codebook tbody tr:nth-of-type(even) {
+  background-color: #dddddd;
+}
+
+table.codebook tbody tr:last-of-type {
+  border-bottom: 2px solid #2a8169;
 }
 
 
