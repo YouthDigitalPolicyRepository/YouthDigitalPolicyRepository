@@ -4,33 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YDPR</title>
-    <link rel="icon" href="www/static/Favicon.png">
+    <link rel="icon" href="www/static/YDPR logo circle.png">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" />
     <link rel="stylesheet" href="www/YDPR.css">
+
 </head>
 
-<div id = "navbar">
-    <nav class="navbar">
-        <div class="logo" href="#dashboard"><h2>YDPR</h2></div>
-        <ul class="nav-links">
-          <li><a href="#dashboard" class="active">Dashboard</a></li>
-          <li><a href="#about">About</a></li>
-        </ul>
-    </nav>
-</div>
-
 <body>
+    <div id = "navbar">
+        <nav class="navbar">
+            <div class="logo"><img src="www/static/YDPR logo circle.png"></div>
+            <ul class="nav-links">
+            <li><a href="#dashboard" class="active">Dashboard</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#for_researchers">For Researchers</a></li>
+            <li><a href="#contact">Contact an expert</a></li>
+            </ul>
+        </nav>
+    </div>  
     <section id = "dashboard" class="view active-view">
         <div class = "content">
             <div id = "intro">
                 <h1>Youth Digital Policy Repository</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
-                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum. <a href="#about"> Learn more</a></p>
-                <h4>Last Update: June 2025</h4>
+                <h4>Last Update: July 2026 (<a href = "https://www.google.com">click here to download)</a></h4>
             </div>
             <div id="map-section">
                 <div id="map"></div>
@@ -64,22 +62,225 @@
                     </table>
                 </div>
             </div>
+            <br>
+            <br>
+            <div>
+                <h1>Citation</h1>
+                <p></p>
+            </div>
         </div>
     </section>
 
     <section id = "about" class="view">
-        <div class = "content">
-            <h1>About the Data</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
-                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                unt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <h1>Citation</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua.</p>
-        </div>
+        <div class = "content text-block">
+            <h1>About</h1>
+            <p>The Youth Digital Policy Repository (YDPR) is an ongoing, open-source repository of policies aimed at regulating digital media for minors. Created with the goal of strengthening the relationship between scientists and policymakers, it is our aim that the YDPR will increase researchers’ incorporation of public policy into their work, while also providing policymakers and invested stakeholders a direct line to relevant scientific evidence. The full article describing the repository and all of its purposes can be found here: [INSERT JOCAM COMMENTARY LINK]. </p>
+            
+            <h2>Contact Us</h2>
+            <p>Have a question? Notice a policy that is missing from the repository? 
+                We’d love to hear from you! You can contact our team at emailhere@placeholder.com.
+            </p>
 
+            <h2>Meet the Team</h2>
+            <div class="card">
+                <div class = "profile">
+                    <img class = headshot src ="www/static/headshots/samantha_vigil.jpg">
+                    <div class = bio>
+                        <h4>Samantha Vigil, MA</h4>
+                        <p>Samantha is a PhD candidate in the Department of Communication at the University 
+                            of California, Davis. Her research examines the relationship between adolescent 
+                            social media use and well-being. Informed by an ecological perspective, she 
+                            investigates the ways that an adolescent’s environment, both within and outside 
+                            the home, shapes their use of and response to media. Her research agenda further 
+                            aims to examine and inform public policy on the topic of regulating digital media 
+                            and technologies for children and adolescents. Samantha has worked with members of 
+                            the California State Legislature, the Department of Public Health, and nonprofit 
+                            organizations to promote the co-creation of evidence-based policy that is best 
+                            positioned to support adolescent, family, and societal well-being and maintain a 
+                            child’s rights-based approach. </p>
+                    </div> 
+                </div>
+            </div>
+            <br>
+            <div class= "card">
+                <div class = "profile">
+                    <img class = headshot src ="www/static/headshots/drew_cingel.jpg">
+                    <div class = bio>
+                        <h4>Drew Cingel, PhD</h4>
+                        <p>Drew Cingel (PhD, Northwestern University) is an Associate Professor
+                            in the Department of Communication at the University of California, Davis, 
+                            and a member of the Human Development Graduate Group. 
+                            He studies the interaction between human development and media effects. 
+                            He is particularly interested in understanding how facets of child and 
+                            adolescent development influence media choice and the effects of exposure 
+                            to media, including the areas of social media use on adolescent mental 
+                            health and social-emotional development, children’s learning from media, 
+                            including television and tablet computers, and the influence of 
+                            media on child and adolescent moral development. His work has been published 
+                            in journals such as the Journal of Communication, Communication Research, 
+                            New Media & Society, Media Psychology, and the Journal of Broadcasting and 
+                            Electronic Media. He currently serves as Chair of the Children, Adolescents, 
+                            and Media division of the International Communication Association. He has 
+                            received funding from many industry and non-profit partners, including 
+                            Netflix and Common Sense Media.</p>
+                    </div> 
+                </div>
+            </div>
+            <br>
+            <div class = "card">
+                <div class = "profile">
+                    <img class = headshot src ="www/static/headshots/sarah_coyne.jpg">
+                    <div class = bio>
+                        <h4>Sarah Coyne, PhD</h4>
+                        <p>Dr. Sarah M. Coyne is a professor of human development 
+                            in the School of Family Life at Brigham Young University. 
+                            She received her BSc degree in Psychology from Utah State University, 
+                            and her PhD in Psychology from the University of Central Lancashire in Preston, 
+                            England. Her research interests involve media, aggression, gender, 
+                            mental health, and child development. Dr. Coyne has over 200 publications 
+                            on these and other topics. She regularly speaks to families and teenagers 
+                            about using media in positive ways. She has five children and lives in Utah.</p>
+                    </div> 
+                </div>
+            </div>
+            <br>
+            <div class = "card">
+                <div class = "profile">
+                    <img class = headshot src ="www/static/headshots/sonia_livingston.jpg">
+                    <div class = bio>
+                        <h4>Sonia Livingstone, DPhil </h4>
+                        <p>Dr. Livingstone is a Professor of Social Psychology in the Department of 
+                            Media and Communications at the London School of Economics and Political Science 
+                            (LSE).She has published 23 books and many articles on children and young people’s 
+                            risks and opportunities, media literacy, mental health, child online safety, 
+                            digital regulation and children’s rights in the digital environment. 
+                            Since founding the EC-funded 33-country “EU Kids Online” research network, 
+                            and the Global Kids Online network (with UNICEF Office of Research-Innocenti), 
+                            she has advised the UK government, Council of Europe, European Commission, 
+                            European Parliament, OECD, International Telecommunications Union and UNICEF, 
+                            among others, on children’s digital lives and needed policy actions. 
+                            Dr. Livingstone currently leads the Digital Futures for Children centre at LSE 
+                            with the 5Rights Foundation and is a member of the Independent International 
+                            Scientific Panel on AI.
+                    </div> 
+                </div>
+            </div>
+            <br>
+            <div class = "card">
+                <div class = "profile">
+                    <img class = headshot src ="www/static/headshots/jane_shawcroft.jpg">
+                    <div class = bio>
+                        <h4>Jane Shawroft, PhD</h4>
+                        <p>Dr. Shawcroft’s research focuses around better understanding how technology
+                            fits into the lives of children and their families. She is specifically 
+                            focused on understanding the role of broader context, family-level processes, 
+                            and individual differences in shaping family and child technology use.
+                            Combining perspectives from Human Development and Communication, she 
+                            focuses on outcomes such as well-being, the development of executive functions,
+                            and children’s relationship with technology. To do this she uses primarily
+                            longitudinal methods, including shorter-term experience sampling methods
+                            and long-lag panel data.
+                        </p>
+                    </div> 
+                </div>
+            </div>
+            <br>
+            <div class = "card">
+                <div class = "profile">
+                    <img class = headshot src ="www/static/headshots/matt_shawcroft.jpg">
+                    <div class = bio>
+                        <h4>Matthew Shawcroft, MS</h4>
+                        <p>Matthew is a cross disciplinary geographic researcher focused on developing greater insight into 
+                            all areas of data science through the use of geographic methedologies. With work published on 
+                            topics including landscape ecology, economics, and communication, his work touches on all aspects of human/environmental interactions.</p>
+                    </div> 
+                </div>
+            </div>
+            <br>
+            <h2>Other Contributors</h2>
+            <p>Below are the names of the contributors who generously gave their time to help build this 
+                repository. As an open-source project, it simply wouldn't exist without the dedication and 
+                collaboration of this community. <br>
+                <ul>
+                    <li>Carly Klinger</li>
+                    <li>Astrea Schweikl</li>
+                    <li>Olivia Mione </li>
+                    <li>Sanjna Hedge </li>
+                    <li>Josefine Peinemann</li>
+                    <li>Joyce Lee</li>
+                    <li>Colina Harvey</li>
+                    <li>Megan Lee</li>
+                    <li>Diego Ruiz</li>
+                    <li>Lance Clemente</li>
+                </ul>
+
+            </p>
+        </div>
+    </section>
+    <section id = "publications" class="view">
+        <div class = "content text-block">
+            <h1>Publications</h1>
+            <h2>Academic</h2>
+            <h2>Press</h2>
+        </div>
+    </section>
+
+    <section id = "for_researchers" class="view">
+        <div class = "content text-block">
+            <h1>For Researchers</h1>
+            <h2>Coding Scheme</h2>
+            <p>Topic filters were established through a two-coder process with a team of UC Davis research assistant coders. Each coder was provided the following table of topic descriptions and instructed to indicate whether the bill discusses each topic (1) or not (0). Intercoder reliability was calculated using Cohen’s Kappa, with values ranging from X-X. For further information or specific inquiries, please contact us at [insert email]. </p>
+            <h2>Policy Search</h2>
+            <p>The following is a working list of websites, sources, and key words searched on a weekly basis by a team of UC Davis undergraduate and post-graduate research assistants to keep the repository as up to date as possible. This is not an exhaustive list and instead offers a sample of the types of government, industry, and news organization sites that research assistants monitor to stay updated. </p>
+            <h4>Sources:</h4>
+            <ul>
+                <li>LegiScan.com</li>
+                <li>NCLS.org</li>
+                <li>Senate.gov (for each state)</li>
+                <li>CNN</li>
+                <li>New York Times</li>
+                <li>Common Sense Media </li>
+            </ul>
+            <h4>Key words:</h4>
+            <ul>
+                <li>Social media and minors bill</li>
+                <li>Child online safety bill </li>
+                <li>Digital/media literacy policy</li>
+                <li>Children’s online privacy bill</li>
+                <li>Social media data protection bill</li>
+                <li>"State” child media bill/policy</li>
+                <li>"State” child AI bill</li>
+                <li>“State” child protection bill</li>
+            </ul>
+            <h4>Download the dataset <a>here.</a></h4>
+        </div>
+    </section>
+    <section id = "contact" class="view">
+        <div class = "content text-block">
+            <h1>Contact an expert</h1>
+            <p>Are you a researcher willing to share your expertise with policymakers? Email us at [insert here] with your name, contact info, and a short description of your expertise.</p>
+            <hr>
+            <h4>Drew Cingel, PhD</h4>
+            <p>Contact: dcingel@ucdavis.edu</p>
+            <p>Area:</p>
+            <hr>
+            <h4>Sarah Coyne, PhD</h4>
+            <p>Contact: smcoyne@byu.edu</p>
+            <p>Area:</p>
+            <hr>
+            <h4>Sonia Livingstone, DPhil</h4>
+            <p>Contact: s.livingstone@lse.ac.uk</p>
+            <p>Area:</p>
+            <hr>
+            <h4>Jane Shawcroft, PhD</h4>
+            <p>Contact: shawcroft.1@osu.edu</p>
+            <p>Area: </p>
+            <hr>
+            <h4>Samantha Vigil, MA</h4>
+            <p>Contact: slvigil@ucdavis.edu</p>
+            <p>Area:</p>
+            <hr>
+        </div>
     </section>
    
         <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
