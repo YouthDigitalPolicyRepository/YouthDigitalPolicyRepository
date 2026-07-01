@@ -7,7 +7,7 @@ let statesDataGlobal; // Store geojson globally for easy access
 const colors = {
     "passed": "#184D47",
     "failed": "#C64756",
-    "in progress": "#FAD586",
+    "pending": "#FAD586",
     "none": "#808080"
 };
 
@@ -21,7 +21,7 @@ async function init() {
     statesDataGlobal = await geoResponse.json();
 
     // Load CSV using PapaParse
-    Papa.parse("YDPR_Data.csv", {
+    Papa.parse("YDPR_data_current.csv", {
         download: true,
         header: true,
         skipEmptyLines: true,
@@ -103,7 +103,7 @@ function updateDashboard() {
             { data: 'state' },
             { data: 'year' },
             { 
-                data: 'statute_number',
+                data: 'id',
                 // This function transforms the raw data into a clickable link
                 render: function(data, type, row) {
                     if (row.url && row.url.trim() !== "") {
@@ -128,7 +128,7 @@ function updateDashboard() {
             if (statePolicies.length > 0) {
                 const statuses = statePolicies.map(p => p.status.toLowerCase());
                 if (statuses.includes("passed")) winningStatus = "passed";
-                else if (statuses.includes("in progress")) winningStatus = "in progress";
+                else if (statuses.includes("pending")) winningStatus = "pending";
                 else if (statuses.includes("failed")) winningStatus = "failed";
             }
             
@@ -150,14 +150,14 @@ function updateDashboard() {
                     const statePolicies = filtered.filter(d => d.state === stateName);
 
                     // 2. Count each status specifically
-                    const counts = { "passed": 0, "in progress": 0, "failed": 0 };
+                    const counts = { "passed": 0, "pending": 0, "failed": 0 };
                     statePolicies.forEach(p => {
                         const s = p.status.toLowerCase();
                         if (counts.hasOwnProperty(s)) counts[s]++;
                     });
 
                     // 3. Format the breakdown string, only including statuses with a non-zero count
-                    const labels = { "passed": "Passed", "in progress": "In Progress", "failed": "Failed" };
+                    const labels = { "passed": "Passed", "pending": "Pending", "failed": "Failed" };
                     const statusSummary = Object.entries(counts)
                         .filter(([, count]) => count > 0)
                         .map(([status, count]) => `${labels[status]}: ${count}`)

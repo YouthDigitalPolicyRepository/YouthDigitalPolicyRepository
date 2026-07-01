@@ -54,8 +54,59 @@ dat$country <- NA
 for(x in 1:nrow(dat)){
   value <- dat$state_country[x]
   split <- strsplit(value, ", ")
-  dat$country[x] <- split[[1]][1]
-  dat$state[x] <- split[[1]][2]
+  dat$country[x] <- split[[1]][2]
+  dat$state[x] <- split[[1]][1]
 }
+
+# Standardize the "status" column.
+# Keep current status column as a "notes" column.
+
+unique(dat$status)
+
+passed_ids <- c("Enacted",
+                "Passed",
+                "enacted",
+                "Engrossed")
+
+pending_ids <- c("Pending",
+                 "In commitee",
+                 "In committee",
+                 "In comitee",
+                 "Introduced",
+                 "Passed over",
+                 "Out of committee",
+                 "Proposed")
+                 
+failed_ids <- c("Failed",
+                "tabled/died",
+                "Died in committee",
+                "Died",
+                "Failed-Adjourned",
+                "died",
+                "failed",
+                "Dead",
+                "Failed, Reintroduced in 2025 cycle as A120",
+                "Failed, Reintroduced in 2025 cycle as A150")
+
+dat$notes <- dat$status
+
+for(x in 1:nrow(dat)){
+  if(dat$status[x] %in% passed_ids){
+    dat$status[x] <- "passed"
+  }
+  
+  if(dat$status[x] %in% pending_ids){
+    dat$status[x] <- "pending"
+  }
+  
+  if(dat$status[x] %in% failed_ids){
+    dat$status[x] <- "failed"
+  }
+  
+}
+
+unique(dat$status)
+
+# Write cleaned data
 
 write.csv(dat, "../YDPR_data_current.csv")
